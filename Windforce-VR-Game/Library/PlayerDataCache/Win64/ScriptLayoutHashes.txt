@@ -233,7 +233,7 @@ fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 58a89415d518eb45b073f6212913a74a SteamVR.dll:Valve.VR.InteractionSystem.Sample.TargetHitEffect
 badc8d355a63a7b0291547b12e2277fc SteamVR.dll:Valve.VR.InteractionSystem.SpawnAndAttachAfterControllerIsTracking
 7d60b1fef3607377096713ebe110e9ab SteamVR.dll:Valve.VR.InteractionSystem.InteractableHoverEvents
-c6211e877fdc4244d2a319ed63601d3c Assembly-CSharp.dll:Valve.VR.Extras.FlyingScript
+36d36ef660d7feaa17c8e8f99cb31442 Assembly-CSharp.dll:Valve.VR.Extras.FlyingScript
 c6bfb6b96dfa8d98e8ee48353bcacfe0 SteamVR.dll:Valve.VR.InteractionSystem.LinearBlendshape
 29d518781ccba8971abc835d8d13df67 SteamVR.dll:Valve.VR.InteractionSystem.Sample.ButtonExample
 08c544de23e8d45042a1c8322312f30b SteamVR.dll:Valve.VR.InteractionSystem.ControllerHoverHighlight
@@ -425,3 +425,4 @@ ae91c545dea6ac849dd81c4b660c68ca Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 69167579cf7fcbb2676fc1e675963dcd Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+31ab5767657b9f7350ba6a324e6334e5 Assembly-CSharp.dll:.PlayerScript

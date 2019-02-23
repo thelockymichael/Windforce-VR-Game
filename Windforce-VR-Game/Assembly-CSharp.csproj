@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\FlyingScript.cs" />
+    <Compile Include="Assets\PlayerScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Mike/Documents/GitHub/WindForce-VR-Game/Windforce-VR-Game/Windforce-VR-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

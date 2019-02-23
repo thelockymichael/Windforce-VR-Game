@@ -10,10 +10,18 @@ namespace Valve.VR.Extras
     {
         public Rigidbody player;
 
+        public float thrust = 50f;
+
+        public float fireRate = 0.1f;
+        private float nextFire;
+
+
         Vector3 lastPos;
 
         SteamVR_Behaviour_Pose trackedObj;
         public float threshold = 1.0f;
+
+        public bool allowFlap = false;
 
         private void Start()
         {
@@ -22,14 +30,20 @@ namespace Valve.VR.Extras
             lastPos = trackedObj.poseAction.localPosition;
         }
 
+
+      
+
         private void Update()
         {
-          //  Debug.Log(trackedObj.GetVelocity());
+            //  Debug.Log(trackedObj.GetVelocity());
 
             Vector3 offset = trackedObj.poseAction.localPosition - lastPos;
-            if (offset.y > threshold)
+            if (offset.y > threshold && allowFlap)
             {
-                player.transform.Translate(Vector3.up * Time.deltaTime * 100, Space.World);
+
+                player.AddForce(transform.forward * thrust);
+
+                //player.transform.Translate(Vector3.up * Time.deltaTime * 1, Space.World);
 
                 lastPos = trackedObj.poseAction.localPosition; // Update last position
                 Debug.Log("Y CHANGING");
@@ -39,10 +53,21 @@ namespace Valve.VR.Extras
             {
                 if (offset.y < -threshold)
                 {
-                   player.transform.Translate(Vector3.up * Time.deltaTime, Space.World);
+                    allowFlap = false;
+                    nextFire = Time.time + fireRate;
+
+                    //  player.transform.Translate(Vector3.up * Time.deltaTime, Space.World);
 
                     lastPos = trackedObj.poseAction.localPosition;
                     Debug.Log("- Y CHANGING");
+                }
+
+
+
+                else if (Time.time > nextFire)
+                {
+                    nextFire = Time.time + fireRate;
+                    allowFlap = true;
                 }
             }
         }
